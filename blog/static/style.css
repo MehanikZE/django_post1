@@ -1,0 +1,13 @@
+html, body{
+	margin: 0;
+	background: #777777;
+
+}
+.header{
+	background: #cc0505;
+	height: 110px;
+}
+.footer{
+	background: #38cb6c;
+    height: 80px;
+}
