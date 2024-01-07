@@ -43,18 +43,18 @@ class AddPost(CreateView):
 
 
 
-# def add_post(requests):
-#     if requests.method == 'POST':
-#         form = AddPostForm(requests.POST)
-#         if form.is_valid():
-#             Post.objects.create(**form.cleaned_data)
-#
-#             # print(form.cleaned_data)
-#     else:
-#         form = AddPostForm()
-#
-#     data = {
-#         'title': 'Добавить пост',
-#         'form': form
-#     }
-#     return render(requests, 'add.html', data)
+def add_post(requests):
+    if requests.method == 'POST':
+        form = AddPostForm(requests.POST)
+        if form.is_valid():
+            Post.objects.create(**form.cleaned_data)
+
+            # print(form.cleaned_data)
+    else:
+        form = AddPostForm()
+
+    data = {
+        'title': 'Добавить пост',
+        'form': form
+    }
+    return render(requests, 'add.html', data)
